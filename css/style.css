@@ -1,7 +1,21 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 body {
     margin: 0;
     z-index: 3;
 }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 
 .navbar {
     background-color: #cacacaf3;
@@ -31,11 +45,11 @@ footer {
 }
 
 .footer-box {
-
+    color: #F1F1F1;
 }
 
 #title {
-    font-family: Share Tech Mono;
+    font-family: 'Share Tech Mono';
     font-style: normal;
     font-weight: normal;
     font-size: 144px;
@@ -51,7 +65,7 @@ footer {
 }
 
 #subtitle {
-    font-family: Share Tech Mono;
+    font-family: 'Share Tech Mono';
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
@@ -109,4 +123,47 @@ footer {
 #C {
     grid-area: C;
     transform: translateY(400px)
+}
+
+#menu-container {
+    padding: 1em 10em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    transition: all .2s ease-in-out;
+}
+
+/* .menu-item:hover{
+    box-shadow: 5px 5px 0px 0px #cacacaf3, 10px 10px 0px 0px #cacacabb, 15px 15px 0px 0px #cacaca58, 20px 20px 0px 0px #cacaca30, 25px 25px 0px 0px #cacaca16, 0px 0px 12px 3px rgba(0,0,0,0); 
+} */
+
+.menu-item:hover {
+    transform: scale(1.1);
+}
+
+.menu-item-image {
+object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.menu-item-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-container {
+    background-color: #DACFA9;
+    margin: 1em 10em;
+    padding: 1em;
+    border-radius: 2em;
 }
